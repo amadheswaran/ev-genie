@@ -1,0 +1,52 @@
+[
+  {
+    "id": "station_001",
+    "name": "Tata Power EV Charging Station - MG Road",
+    "latitude": 12.9755,
+    "longitude": 77.6040,
+    "provider": "Tata Power",
+    "address": "MG Road, Bengaluru, Karnataka",
+    "connectors": ["CCS2", "Type2"],
+    "power_kw": 25
+  },
+  {
+    "id": "station_002",
+    "name": "Ather Grid Charging - Indiranagar",
+    "latitude": 12.9784,
+    "longitude": 77.6408,
+    "provider": "Ather Grid",
+    "address": "100 Feet Road, Indiranagar, Bengaluru, Karnataka",
+    "connectors": ["Type2"],
+    "power_kw": 7
+  },
+  {
+    "id": "station_003",
+    "name": "Statiq EV Charger - Koramangala",
+    "latitude": 12.9352,
+    "longitude": 77.6245,
+    "provider": "Statiq",
+    "address": "Koramangala 5th Block, Bengaluru, Karnataka",
+    "connectors": ["CCS2", "CHAdeMO"],
+    "power_kw": 50
+  },
+  {
+    "id": "station_004",
+    "name": "JioBP Pulse - Hebbal",
+    "latitude": 13.0358,
+    "longitude": 77.5970,
+    "provider": "JioBP",
+    "address": "Hebbal Flyover, Bengaluru, Karnataka",
+    "connectors": ["CCS2", "CHAdeMO"],
+    "power_kw": 60
+  },
+  {
+    "id": "station_005",
+    "name": "Zeon Charging Station - Electronic City",
+    "latitude": 12.8392,
+    "longitude": 77.6778,
+    "provider": "Zeon Charging",
+    "address": "Electronic City Phase 1, Bengaluru, Karnataka",
+    "connectors": ["CCS2", "Type2"],
+    "power_kw": 120
+  }
+]
