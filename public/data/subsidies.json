@@ -1,0 +1,47 @@
+[
+  {
+    "state": "Delhi",
+    "details": "₹5,000 per kWh up to ₹30,000 for two-wheelers; ₹10,000 per kWh up to ₹1.5 lakh for cars; registration & road-tax waived.",
+    "source": "https://www.news18.com/news/auto/heres-your-quick-run-down-of-state-wise-subsidies-for-electric-vehicles-in-india-4770719.html"
+  },
+  {
+    "state": "Gujarat",
+    "details": "₹10,000/kWh for E2W (max ₹20,000); ₹10,000/kWh for cars (max ₹1.5 lakh); ₹50,000 for 3-wheelers; registration & road-tax exemption.",
+    "source": "https://www.news18.com/news/auto/heres-your-quick-run-down-of-state-wise-subsidies-for-electric-vehicles-in-india-4770719.html"
+  },
+  {
+    "state": "Maharashtra",
+    "details": "10% discount on all EVs; registration & MV tax exemption; toll-free on major expressways; chargers every 25 km.",
+    "source": "https://www.indiatoday.in/india/story/maharashtra-electric-vehicle-policy-2025-toll-subsidies-tax-benefits-2717117-2025-04-29.html"
+  },
+  {
+    "state": "Rajasthan",
+    "details": "₹5,000-10,000 for E2W based on battery size (₹5–₹10 k); Rajasthan EV policy offers direct SGST reimbursement.",
+    "source": "https://www.saurenergy.com/ev-storage/states-ev-policies-with-attractive-subsidies-to-offer"
+  },
+  {
+    "state": "Odisha",
+    "details": "₹5,000 per kWh up to ₹20,000 for E2W; ₹30,000 for E3W; ₹1.5 lakh for E4W; 100% SGST + 4-year road-tax exemption; infrastructure grants.",
+    "source": "https://aeee.in/state-local-action/"
+  },
+  {
+    "state": "Telangana",
+    "details": "100% road-tax & registration fee waiver for first 200,000 E2W, 20,000 E3W, 5,000 4-W commercial EVs & 500 EV buses.",
+    "source": "https://cleanmobilityshift.com/policy-regulation/indias-leading-ev-states-announce-more-positive-measures/"
+  },
+  {
+    "state": "Karnataka",
+    "details": "₹4,000/kWh subsidy for first 2,500 E4W and first 200 E3W; max ex-factory price ₹15 lakh; strong support for charging infra.",
+    "source": "https://cleanmobilityshift.com/policy-regulation/ramping-up-clean-mobility-decoding-karnataka-latest-initiative/"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "details": "₹5,000 for E2W; ₹12,000 for E3W; ₹1 lakh for cars; 100% road-tax & registration exemption; charging stations rollout.",
+    "source": "https://en.wikipedia.org/wiki/Plug-in_electric_vehicles_in_India"
+  },
+  {
+    "state": "Tamil Nadu",
+    "details": "₹10,000/kWh for two-wheelers (max ₹30,000); 25% capital subsidy for chargers; no road-tax on EVs.",
+    "source": "https://www.evmechanica.com/top-10-state-subsidies-that-make-buying-an-EV-in-India-easier/"
+  }
+]
