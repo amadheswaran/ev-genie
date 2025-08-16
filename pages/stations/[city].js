@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 
-const Map = dynamic(() => import("../../components/Map"), { ssr: false });
+const Map = dynamic(() => import("../../components/Map.jsx"), { ssr: false });
 
 export default function CityStations({ city }) {
   const router = useRouter();
