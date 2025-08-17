@@ -210,6 +210,47 @@ function Calculator() {
     )}
   </div>
 
+            {/* Annual Savings */}
+<div className="bg-gradient-to-r from-green-50 via-emerald-100 to-teal-50
+   dark:from-gray-800 dark:via-gray-700 dark:to-gray-800
+   p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition">
+   <div className="text-base font-semibold text-gray-700 dark:text-gray-200">💡 Annual Savings</div>
+   <div className="text-5xl font-extrabold text-green-700 dark:text-green-400 mt-3 tracking-wide">
+      ₹{fmt(annualSavings,0)}
+   </div>
+   <div className="text-sm text-gray-500 dark:text-gray-400 mt-3 italic">
+      Estimate based on your inputs
+   </div>
+</div>
+{/* Breakeven */}
+<div className="bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50
+   dark:from-gray-800 dark:via-gray-700 dark:to-gray-800
+   p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+   <h4 className="text-base font-semibold text-gray-700 dark:text-gray-200 mb-4 flex items-center gap-2">
+      ⚖️ Breakeven
+   </h4>
+   {breakevenMonths ? (
+   <div className="space-y-3">
+      <div className="flex justify-between">
+         <span className="text-sm text-gray-600 dark:text-gray-300">Months</span>
+         <span className="text-purple-700 dark:text-purple-400 font-semibold">
+         {fmt(breakevenMonths,1)}
+         </span>
+      </div>
+      <div className="flex justify-between">
+         <span className="text-sm text-gray-600 dark:text-gray-300">Years</span>
+         <span className="text-purple-700 dark:text-purple-400 font-semibold">
+         {fmt(breakevenMonths/12,2)}
+         </span>
+      </div>
+   </div>
+   ) : (
+   <div className="text-sm text-gray-600 dark:text-gray-400 italic">
+      No positive monthly savings → breakeven not reachable.
+   </div>
+   )}
+</div> 
+  </div>
 
 
   {/* Cumulative Savings Chart */}
