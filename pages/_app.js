@@ -1,21 +1,17 @@
-// /pages/_app.js
-import "leaflet/dist/leaflet.css";
-import "../styles/globals.css"; // keep your global styles
-import { useEffect } from "react";
+// pages/_app.js
+import '../styles/globals.css';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    // Google Analytics (replace with your GA ID if needed)
-    if (typeof window !== "undefined" && !window.GA_INITIALIZED) {
-      window.GA_INITIALIZED = true;
-      // Example GA init - replace with actual snippet if using GA4
-    }
-  }, []);
-
   return (
-    <ThemeProvider attribute="class">
+    <>
+      <Head>
+        <title>EV Helper Microsite</title>
+        <meta name="description" content="Find EV charging stations, subsidies, and calculate EV savings in India" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Component {...pageProps} />
-    </ThemeProvider>
+    </>
   );
 }
 
