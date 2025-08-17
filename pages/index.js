@@ -1,7 +1,12 @@
 import Head from "next/head";
-import EVMap from "../components/EVMap";
 import Calculator from "../components/Calculator";
 import Subsidies from "../components/Subsidies";
+
+import dynamic from "next/dynamic";
+
+const EVMap = dynamic(() => import("../components/EVMap"), {
+  ssr: false, // disable server-side rendering
+});
 
 export default function Home() {
   return (
