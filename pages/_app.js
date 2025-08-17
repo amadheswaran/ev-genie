@@ -1,5 +1,6 @@
 // /pages/_app.js
-import "../styles/globals.css";
+import "leaflet/dist/leaflet.css";
+import "../styles/globals.css"; // keep your global styles
 import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
