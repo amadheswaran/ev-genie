@@ -221,28 +221,62 @@ function Calculator() {
   </div>
 
 
-  {/* Cumulative Savings Chart */}
-  <div className="bg-gradient-to-tr from-sky-50 via-indigo-50 to-violet-50 
-                  dark:from-gray-800 dark:via-gray-700 dark:to-gray-800
-                  p-6 rounded-2xl shadow-md hover:shadow-xl transition">
-    <h4 className="text-base font-semibold text-gray-700 dark:text-gray-200 mb-4">
-      📈 Cumulative savings (24 months)
-    </h4>
-    <div className="w-full h-[300px]">
-      <ResponsiveContainer width="100%" height={260}>
-        <LineChart data={chartData}>
-          <CartesianGrid strokeDasharray="3 3" className="stroke-gray-300 dark:stroke-gray-600" />
-          <XAxis dataKey="month" stroke="#6b7280" />
-          <YAxis stroke="#6b7280" />
-          <Tooltip />
-          <Line type="monotone" dataKey="savings" stroke="#2563eb" strokeWidth={3} dot={{ r: 4 }} />
-        </LineChart>
-      </ResponsiveContainer>
-    </div>
-    <div className="mt-4 text-center text-xs text-gray-500 dark:text-gray-400 italic">
-      [AdSense Placeholder - Chart]
-    </div>
+{/* Cumulative Savings Chart */}
+<div className="bg-gradient-to-tr from-sky-50 via-indigo-50 to-violet-50 
+                dark:from-gray-800 dark:via-gray-700 dark:to-gray-800
+                p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+  <h4 className="text-base font-semibold text-gray-700 dark:text-gray-200 mb-4">
+    📈 Cumulative savings (24 months)
+  </h4>
+  <div className="w-full h-[300px]">
+    <ResponsiveContainer width="100%" height={260}>
+      <LineChart data={chartData}>
+        {/* Grid with vertical dashed lines */}
+        <CartesianGrid 
+          strokeDasharray="3 3" 
+          vertical={true} 
+          horizontal={true} 
+          className="stroke-gray-300 dark:stroke-gray-600" 
+        />
+
+        {/* X-Axis with label */}
+        <XAxis 
+          dataKey="month" 
+          stroke="#6b7280" 
+          label={{ value: "Months", position: "insideBottom", offset: -5 }} 
+        />
+
+        {/* Y-Axis with label + 2-decimal values */}
+        <YAxis 
+          stroke="#6b7280"
+          tickFormatter={(value) => value.toFixed(2)}
+          label={{ 
+            value: "Savings (₹)", 
+            angle: -90, 
+            position: "insideLeft", 
+            offset: 10 
+          }}
+        />
+
+        {/* Tooltip with rounded values */}
+        <Tooltip formatter={(value: number) => value.toFixed(2)} />
+
+        {/* Line with subtle dots */}
+        <Line 
+          type="monotone" 
+          dataKey="savings" 
+          stroke="#2563eb" 
+          strokeWidth={3} 
+          dot={{ r: 4 }} 
+        />
+      </LineChart>
+    </ResponsiveContainer>
   </div>
+  <div className="mt-4 text-center text-xs text-gray-500 dark:text-gray-400 italic">
+    [AdSense Placeholder - Chart]
+  </div>
+</div>
+
 
       {/* JSON-LD for FAQ (SEO) */}
       <script
