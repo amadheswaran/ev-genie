@@ -220,7 +220,6 @@ function Calculator() {
   </div>
   </div>
 
-
 {/* Cumulative Savings Chart */}
 <div className="bg-gradient-to-tr from-sky-50 via-indigo-50 to-violet-50 
                 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800
@@ -259,7 +258,7 @@ function Calculator() {
         />
 
         {/* Tooltip with rounded values */}
-        <Tooltip formatter={(value: number) => value.toFixed(2)} />
+        <Tooltip formatter={(value) => Number(value).toFixed(2)} />
 
         {/* Line with subtle dots */}
         <Line 
@@ -276,7 +275,6 @@ function Calculator() {
     [AdSense Placeholder - Chart]
   </div>
 </div>
-
 
       {/* JSON-LD for FAQ (SEO) */}
       <script
