@@ -151,49 +151,23 @@ function Calculator() {
           <div className="mt-4 bg-gray-50 border rounded p-3 text-center">[AdSense Placeholder - Calculator]</div>
         </div>
 
-        /* <div className="space-y-4">
-          <div className="bg-white p-6 rounded-2xl shadow">
-            <h4 className="text-sm text-gray-500">Monthly comparison</h4>
-            <div className="mt-3 space-y-2">
-              <div className="flex justify-between"><span className="text-sm">Petrol cost</span><span className="font-medium text-red-600">₹{fmt(petrolCost,0)}</span></div>
-              <div className="flex justify-between"><span className="text-sm">Electric cost</span><span className="font-medium text-green-600">₹{fmt(electricCost,0)}</span></div>
-              <div className="flex justify-between"><span className="text-sm">Monthly savings</span><span className="font-bold text-blue-600">₹{fmt(monthlySavings,0)}</span></div>
-            </div>
-          </div>
-
-          <div className="bg-white p-6 rounded-2xl shadow text-center">
-            <div className="text-sm text-gray-500">Annual savings</div>
-            <div className="text-3xl font-bold text-green-700 mt-2">₹{fmt(annualSavings,0)}</div>
-            <div className="text-xs text-gray-400 mt-2">Estimate based on inputs</div>
-          </div>
-
-          <div className="bg-white p-6 rounded-2xl shadow">
-            <h4 className="text-sm text-gray-600 mb-2">⚖️ Breakeven</h4>
-            {breakevenMonths ? (
-              <>
-                <div className="flex justify-between"><span>Months</span><span className="text-purple-600 font-medium">{fmt(breakevenMonths,1)}</span></div>
-                <div className="flex justify-between"><span>Years</span><span className="text-purple-600 font-medium">{fmt(breakevenMonths/12,2)}</span></div>
-              </>
-            ) : (
-              <div className="text-sm text-gray-600">No positive monthly savings → breakeven not reachable.</div>
-            )}
-          </div>
-        </div> */
-
-<div className="space-y-6">
+       <div className="space-y-8">
 
   {/* Monthly Comparison */}
-  <div className="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 
-                  p-6 rounded-2xl shadow hover:shadow-lg transition">
-    <h4 className="text-sm font-semibold text-gray-600 dark:text-gray-300">📊 Monthly Comparison</h4>
-    <div className="mt-4 space-y-3">
+  <div className="bg-gradient-to-br from-indigo-50 via-blue-50 to-cyan-50 
+                  dark:from-gray-800 dark:via-gray-700 dark:to-gray-800
+                  p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+    <h4 className="text-base font-semibold text-gray-700 dark:text-gray-200 flex items-center gap-2">
+      📊 Monthly Comparison
+    </h4>
+    <div className="mt-5 space-y-3">
       <div className="flex justify-between border-b border-gray-200 dark:border-gray-600 pb-2">
         <span className="text-sm text-gray-600 dark:text-gray-300">Petrol cost</span>
-        <span className="font-medium text-red-600">₹{fmt(petrolCost,0)}</span>
+        <span className="font-semibold text-red-600">₹{fmt(petrolCost,0)}</span>
       </div>
       <div className="flex justify-between border-b border-gray-200 dark:border-gray-600 pb-2">
         <span className="text-sm text-gray-600 dark:text-gray-300">Electric cost</span>
-        <span className="font-medium text-green-600">₹{fmt(electricCost,0)}</span>
+        <span className="font-semibold text-green-600">₹{fmt(electricCost,0)}</span>
       </div>
       <div className="flex justify-between">
         <span className="text-sm text-gray-600 dark:text-gray-300">Monthly savings</span>
@@ -203,30 +177,38 @@ function Calculator() {
   </div>
 
   {/* Annual Savings */}
-  <div className="bg-gradient-to-r from-green-50 to-emerald-100 dark:from-gray-800 dark:to-gray-700 
-                  p-6 rounded-2xl shadow text-center hover:shadow-lg transition">
-    <div className="text-sm text-gray-600 dark:text-gray-300">💡 Annual Savings</div>
-    <div className="text-4xl font-extrabold text-green-700 dark:text-green-400 mt-3">
+  <div className="bg-gradient-to-r from-green-50 via-emerald-100 to-teal-50
+                  dark:from-gray-800 dark:via-gray-700 dark:to-gray-800
+                  p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition">
+    <div className="text-base font-semibold text-gray-700 dark:text-gray-200">💡 Annual Savings</div>
+    <div className="text-5xl font-extrabold text-green-700 dark:text-green-400 mt-3 tracking-wide">
       ₹{fmt(annualSavings,0)}
     </div>
-    <div className="text-xs text-gray-500 dark:text-gray-400 mt-2 italic">
+    <div className="text-sm text-gray-500 dark:text-gray-400 mt-3 italic">
       Estimate based on your inputs
     </div>
   </div>
 
   {/* Breakeven */}
-  <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-700 
-                  p-6 rounded-2xl shadow hover:shadow-lg transition">
-    <h4 className="text-sm font-semibold text-gray-600 dark:text-gray-300 mb-3">⚖️ Breakeven</h4>
+  <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50
+                  dark:from-gray-800 dark:via-gray-700 dark:to-gray-800
+                  p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+    <h4 className="text-base font-semibold text-gray-700 dark:text-gray-200 mb-4 flex items-center gap-2">
+      ⚖️ Breakeven
+    </h4>
     {breakevenMonths ? (
-      <div className="space-y-2">
+      <div className="space-y-3">
         <div className="flex justify-between">
           <span className="text-sm text-gray-600 dark:text-gray-300">Months</span>
-          <span className="text-purple-600 font-medium">{fmt(breakevenMonths,1)}</span>
+          <span className="text-purple-700 dark:text-purple-400 font-semibold">
+            {fmt(breakevenMonths,1)}
+          </span>
         </div>
         <div className="flex justify-between">
           <span className="text-sm text-gray-600 dark:text-gray-300">Years</span>
-          <span className="text-purple-600 font-medium">{fmt(breakevenMonths/12,2)}</span>
+          <span className="text-purple-700 dark:text-purple-400 font-semibold">
+            {fmt(breakevenMonths/12,2)}
+          </span>
         </div>
       </div>
     ) : (
@@ -236,25 +218,31 @@ function Calculator() {
     )}
   </div>
 
+  {/* Cumulative Savings Chart */}
+  <div className="bg-gradient-to-tr from-sky-50 via-indigo-50 to-violet-50 
+                  dark:from-gray-800 dark:via-gray-700 dark:to-gray-800
+                  p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+    <h4 className="text-base font-semibold text-gray-700 dark:text-gray-200 mb-4">
+      📈 Cumulative savings (24 months)
+    </h4>
+    <div className="w-full h-[300px]">
+      <ResponsiveContainer width="100%" height={260}>
+        <LineChart data={chartData}>
+          <CartesianGrid strokeDasharray="3 3" className="stroke-gray-300 dark:stroke-gray-600" />
+          <XAxis dataKey="month" stroke="#6b7280" />
+          <YAxis stroke="#6b7280" />
+          <Tooltip />
+          <Line type="monotone" dataKey="savings" stroke="#2563eb" strokeWidth={3} dot={{ r: 4 }} />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
+    <div className="mt-4 text-center text-xs text-gray-500 dark:text-gray-400 italic">
+      [AdSense Placeholder - Chart]
+    </div>
+  </div>
+
 </div>
 
-      </div>
-
-      <div className="bg-white p-6 rounded-2xl shadow">
-        <h4 className="text-sm text-gray-500 mb-3">Cumulative savings (24 months)</h4>
-        <div style={{ width: '100%', height: 300 }}>
-          <ResponsiveContainer width="100%" height={260}>
-            <LineChart data={chartData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="month" />
-              <YAxis />
-              <Tooltip />
-              <Line type="monotone" dataKey="savings" stroke="#2563eb" strokeWidth={3} />
-            </LineChart>
-          </ResponsiveContainer>
-        </div>
-        <div className="mt-4 text-center">[AdSense Placeholder - Chart]</div>
-      </div>
 
       {/* JSON-LD for FAQ (SEO) */}
       <script
