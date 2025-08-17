@@ -34,6 +34,10 @@ export default function Document() {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx"
           crossOrigin="anonymous"
         ></script>
+            
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
       </Head>
       <body className="bg-white dark:bg-gray-900 text-black dark:text-white">
         <Main />
