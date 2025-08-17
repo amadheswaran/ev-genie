@@ -152,7 +152,8 @@ function Calculator() {
           </div>
 
           <div className="bg-white p-6 rounded-2xl shadow text-center">
-            <div className="text-sm text-gray-500"><p className="text-3xl font-bold text-green-600">{annualSavings}</p>
+            <div className="text-sm text-gray-500">
+  <p className="text-3xl font-bold text-green-600">13,4567</p>
 <p className="text-sm text-gray-500">Estimated annual savings</p>
 Annual savings</div>
             <div className="text-3xl font-bold text-green-700 mt-2">₹{fmt(annualSavings,0)}</div>
