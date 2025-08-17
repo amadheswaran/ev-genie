@@ -175,42 +175,8 @@ function Calculator() {
       </div>
     </div>
   </div>
-  
-{/* Annual Savings */}
-  <div className="bg-gradient-to-r from-green-50 to-emerald-100 dark:from-gray-800 dark:to-gray-700 
-                  p-6 rounded-2xl shadow text-center hover:shadow-lg transition">
-    <div className="text-sm text-gray-600 dark:text-gray-300">💡 Annual Savings</div>
-    <div className="text-4xl font-extrabold text-green-700 dark:text-green-400 mt-3">
-      ₹{fmt(annualSavings,0)}
-    </div>
-    <div className="text-xs text-gray-500 dark:text-gray-400 mt-2 italic">
-      Estimate based on your inputs
-    </div>
-  </div>
 
-  {/* Breakeven */}
-  <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-700 
-                  p-6 rounded-2xl shadow hover:shadow-lg transition">
-    <h4 className="text-sm font-semibold text-gray-600 dark:text-gray-300 mb-3">⚖️ Breakeven</h4>
-    {breakevenMonths ? (
-      <div className="space-y-2">
-        <div className="flex justify-between">
-          <span className="text-sm text-gray-600 dark:text-gray-300">Months</span>
-          <span className="text-purple-600 font-medium">{fmt(breakevenMonths,1)}</span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-sm text-gray-600 dark:text-gray-300">Years</span>
-          <span className="text-purple-600 font-medium">{fmt(breakevenMonths/12,2)}</span>
-        </div>
-      </div>
-    ) : (
-      <div className="text-sm text-gray-600 dark:text-gray-400 italic">
-        No positive monthly savings → breakeven not reachable.
-      </div>
-    )}
-  </div>
-
-            {/* Annual Savings */}
+  {/* Annual Savings */}
 <div className="bg-gradient-to-r from-green-50 via-emerald-100 to-teal-50
    dark:from-gray-800 dark:via-gray-700 dark:to-gray-800
    p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition">
@@ -222,6 +188,7 @@ function Calculator() {
       Estimate based on your inputs
    </div>
 </div>
+
 {/* Breakeven */}
 <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50
    dark:from-gray-800 dark:via-gray-700 dark:to-gray-800
@@ -251,6 +218,7 @@ function Calculator() {
    )}
 </div> 
   </div>
+  </div>
 
 
   {/* Cumulative Savings Chart */}
@@ -275,9 +243,6 @@ function Calculator() {
       [AdSense Placeholder - Chart]
     </div>
   </div>
-
-</div>
-
 
       {/* JSON-LD for FAQ (SEO) */}
       <script
