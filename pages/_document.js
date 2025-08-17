@@ -1,23 +1,44 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+// /pages/_document.js
+import { Html, Head, Main, NextScript } from "next/document";
 
-class MyDocument extends Document {
-  render() {
-    return (
-      <Html lang="en">
-        <Head>
-          {/* Tailwind CDN for rapid styling (ok for microsite / MVP). In production consider proper Tailwind build. */}
-          <script src="https://cdn.tailwindcss.com"></script>
+export default function Document() {
+  return (
+    <Html lang="en" className="scroll-smooth">
+      <Head>
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" />
 
-          <meta name="description" content="EV Helper — find EV charging stations, compare costs, and view state-wise EV subsidies in India." />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-        </Head>
-        <body className="antialiased">
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
+        {/* Dark Mode Color Scheme */}
+        <meta name="color-scheme" content="light dark" />
+
+        {/* SEO Meta */}
+        <meta
+          name="description"
+          content="EV Helper – Find EV charging stations, calculate savings, and explore subsidies across India."
+        />
+        <meta name="keywords" content="EV charging stations, electric vehicles, subsidies, calculator, India" />
+        <meta name="author" content="EV Helper" />
+
+        {/* Open Graph / Social */}
+        <meta property="og:title" content="EV Helper – EV Charging & Subsidies" />
+        <meta
+          property="og:description"
+          content="Find EV charging stations, calculate savings, and explore subsidies across India."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/preview.png" />
+
+        {/* Adsense (async load) */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx"
+          crossOrigin="anonymous"
+        ></script>
+      </Head>
+      <body className="bg-white dark:bg-gray-900 text-black dark:text-white">
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  );
 }
-
-export default MyDocument;
