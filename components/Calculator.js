@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Chart } from "chart.js";
+import Chart from "chart.js/auto";
 
 export default function Calculator() {
   const [petrolCost, setPetrolCost] = useState(100000);
