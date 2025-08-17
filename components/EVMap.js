@@ -1,27 +1,47 @@
-import { useEffect } from "react";
-import L from "leaflet";
+import { useEffect, useState } from "react";
+
+let MapContainer, TileLayer, Marker, Popup;
+
+if (typeof window !== "undefined") {
+  // Import only in client-side
+  const RL = require("react-leaflet");
+  MapContainer = RL.MapContainer;
+  TileLayer = RL.TileLayer;
+  Marker = RL.Marker;
+  Popup = RL.Popup;
+
+  require("leaflet/dist/leaflet.css");
+}
 
 export default function EVMap() {
+  const [center, setCenter] = useState([12.9716, 77.5946]); // Default: Bengaluru
+
   useEffect(() => {
-    const map = L.map("mapContainer").setView([12.9716, 77.5946], 12); // Bengaluru center
-
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: "© OpenStreetMap contributors",
-    }).addTo(map);
-
-    // Try locating user
-    map.locate({ setView: true, maxZoom: 14 });
-
-    // Add markers (demo stations)
-    const stations = [
-      { lat: 12.9716, lng: 77.5946, name: "MG Road Charger" },
-      { lat: 12.9352, lng: 77.6245, name: "Koramangala Charger" },
-      { lat: 12.9981, lng: 77.5921, name: "Yeshwanthpur Charger" },
-    ];
-    stations.forEach(station => {
-      L.marker([station.lat, station.lng]).addTo(map).bindPopup(station.name);
-    });
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        pos => {
+          setCenter([pos.coords.latitude, pos.coords.longitude]);
+        },
+        () => {
+          setCenter([12.9716, 77.5946]); // fallback Bengaluru
+        }
+      );
+    }
   }, []);
 
-  return <div id="mapContainer" className="h-96 w-full rounded-lg shadow-md"></div>;
+  if (!MapContainer) return <p>Loading map...</p>;
+
+  return (
+    <div className="h-[500px] w-full rounded-lg shadow">
+      <MapContainer center={center} zoom={13} style={{ height: "100%", width: "100%" }}>
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution="&copy; OpenStreetMap contributors"
+        />
+        <Marker position={center}>
+          <Popup>You are here 🚗⚡</Popup>
+        </Marker>
+      </MapContainer>
+    </div>
+  );
 }
