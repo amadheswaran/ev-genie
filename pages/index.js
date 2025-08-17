@@ -189,34 +189,7 @@ function Calculator() {
     </div>
   </div>
 
-  {/* Breakeven */}
-  <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50
-                  dark:from-gray-800 dark:via-gray-700 dark:to-gray-800
-                  p-6 rounded-2xl shadow-md hover:shadow-xl transition">
-    <h4 className="text-base font-semibold text-gray-700 dark:text-gray-200 mb-4 flex items-center gap-2">
-      ⚖️ Breakeven
-    </h4>
-    {breakevenMonths ? (
-      <div className="space-y-3">
-        <div className="flex justify-between">
-          <span className="text-sm text-gray-600 dark:text-gray-300">Months</span>
-          <span className="text-purple-700 dark:text-purple-400 font-semibold">
-            {fmt(breakevenMonths,1)}
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-sm text-gray-600 dark:text-gray-300">Years</span>
-          <span className="text-purple-700 dark:text-purple-400 font-semibold">
-            {fmt(breakevenMonths/12,2)}
-          </span>
-        </div>
-      </div>
-    ) : (
-      <div className="text-sm text-gray-600 dark:text-gray-400 italic">
-        No positive monthly savings → breakeven not reachable.
-      </div>
-    )}
-  </div>
+
 
   {/* Cumulative Savings Chart */}
   <div className="bg-gradient-to-tr from-sky-50 via-indigo-50 to-violet-50 
