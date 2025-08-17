@@ -152,25 +152,30 @@ function Calculator() {
         </div>
 
         <div className="space-y-6">
-   {/* Monthly Comparison */}
-   <div className="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 
-      p-6 rounded-2xl shadow hover:shadow-lg transition">
-      <h4 className="text-sm font-semibold text-gray-600 dark:text-gray-300">📊 Monthly Comparison</h4>
-      <div className="mt-4 space-y-3">
-         <div className="flex justify-between border-b border-gray-200 dark:border-gray-600 pb-2">
-            <span className="text-sm text-gray-600 dark:text-gray-300">Petrol cost</span>
-            <span className="font-medium text-red-600">₹{fmt(petrolCost,0)}</span>
-         </div>
-         <div className="flex justify-between border-b border-gray-200 dark:border-gray-600 pb-2">
-            <span className="text-sm text-gray-600 dark:text-gray-300">Electric cost</span>
-            <span className="font-medium text-green-600">₹{fmt(electricCost,0)}</span>
-         </div>
-         <div className="flex justify-between">
-            <span className="text-sm text-gray-600 dark:text-gray-300">Monthly savings</span>
-            <span className="font-bold text-blue-600">₹{fmt(monthlySavings,0)}</span>
-         </div>
+
+  {/* Monthly Comparison */}
+  <div className="bg-gradient-to-br from-indigo-50 via-blue-50 to-cyan-50 
+                  dark:from-gray-800 dark:via-gray-700 dark:to-gray-800
+                  p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+    <h4 className="text-base font-semibold text-gray-700 dark:text-gray-200 flex items-center gap-2">
+      📊 Monthly Comparison
+    </h4>
+    <div className="mt-5 space-y-3">
+      <div className="flex justify-between border-b border-gray-200 dark:border-gray-600 pb-2">
+        <span className="text-sm text-gray-600 dark:text-gray-300">Petrol cost</span>
+        <span className="font-semibold text-red-600">₹{fmt(petrolCost,0)}</span>
       </div>
-   </div>
+      <div className="flex justify-between border-b border-gray-200 dark:border-gray-600 pb-2">
+        <span className="text-sm text-gray-600 dark:text-gray-300">Electric cost</span>
+        <span className="font-semibold text-green-600">₹{fmt(electricCost,0)}</span>
+      </div>
+      <div className="flex justify-between">
+        <span className="text-sm text-gray-600 dark:text-gray-300">Monthly savings</span>
+        <span className="font-bold text-blue-600">₹{fmt(monthlySavings,0)}</span>
+      </div>
+    </div>
+  </div>
+  
    {/* Annual Savings */}
    <div className="bg-gradient-to-r from-green-50 to-emerald-100 dark:from-gray-800 dark:to-gray-700 
       p-6 rounded-2xl shadow text-center hover:shadow-lg transition">
