@@ -151,7 +151,7 @@ function Calculator() {
           <div className="mt-4 bg-gray-50 border rounded p-3 text-center">[AdSense Placeholder - Calculator]</div>
         </div>
 
-        <div className="space-y-4">
+        /* <div className="space-y-4">
           <div className="bg-white p-6 rounded-2xl shadow">
             <h4 className="text-sm text-gray-500">Monthly comparison</h4>
             <div className="mt-3 space-y-2">
@@ -178,7 +178,66 @@ function Calculator() {
               <div className="text-sm text-gray-600">No positive monthly savings → breakeven not reachable.</div>
             )}
           </div>
+        </div> */
+
+<div className="space-y-6">
+
+  {/* Monthly Comparison */}
+  <div className="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 
+                  p-6 rounded-2xl shadow hover:shadow-lg transition">
+    <h4 className="text-sm font-semibold text-gray-600 dark:text-gray-300">📊 Monthly Comparison</h4>
+    <div className="mt-4 space-y-3">
+      <div className="flex justify-between border-b border-gray-200 dark:border-gray-600 pb-2">
+        <span className="text-sm text-gray-600 dark:text-gray-300">Petrol cost</span>
+        <span className="font-medium text-red-600">₹{fmt(petrolCost,0)}</span>
+      </div>
+      <div className="flex justify-between border-b border-gray-200 dark:border-gray-600 pb-2">
+        <span className="text-sm text-gray-600 dark:text-gray-300">Electric cost</span>
+        <span className="font-medium text-green-600">₹{fmt(electricCost,0)}</span>
+      </div>
+      <div className="flex justify-between">
+        <span className="text-sm text-gray-600 dark:text-gray-300">Monthly savings</span>
+        <span className="font-bold text-blue-600">₹{fmt(monthlySavings,0)}</span>
+      </div>
+    </div>
+  </div>
+
+  {/* Annual Savings */}
+  <div className="bg-gradient-to-r from-green-50 to-emerald-100 dark:from-gray-800 dark:to-gray-700 
+                  p-6 rounded-2xl shadow text-center hover:shadow-lg transition">
+    <div className="text-sm text-gray-600 dark:text-gray-300">💡 Annual Savings</div>
+    <div className="text-4xl font-extrabold text-green-700 dark:text-green-400 mt-3">
+      ₹{fmt(annualSavings,0)}
+    </div>
+    <div className="text-xs text-gray-500 dark:text-gray-400 mt-2 italic">
+      Estimate based on your inputs
+    </div>
+  </div>
+
+  {/* Breakeven */}
+  <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-700 
+                  p-6 rounded-2xl shadow hover:shadow-lg transition">
+    <h4 className="text-sm font-semibold text-gray-600 dark:text-gray-300 mb-3">⚖️ Breakeven</h4>
+    {breakevenMonths ? (
+      <div className="space-y-2">
+        <div className="flex justify-between">
+          <span className="text-sm text-gray-600 dark:text-gray-300">Months</span>
+          <span className="text-purple-600 font-medium">{fmt(breakevenMonths,1)}</span>
         </div>
+        <div className="flex justify-between">
+          <span className="text-sm text-gray-600 dark:text-gray-300">Years</span>
+          <span className="text-purple-600 font-medium">{fmt(breakevenMonths/12,2)}</span>
+        </div>
+      </div>
+    ) : (
+      <div className="text-sm text-gray-600 dark:text-gray-400 italic">
+        No positive monthly savings → breakeven not reachable.
+      </div>
+    )}
+  </div>
+
+</div>
+
       </div>
 
       <div className="bg-white p-6 rounded-2xl shadow">
